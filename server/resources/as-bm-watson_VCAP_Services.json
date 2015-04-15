@@ -1,0 +1,37 @@
+{
+  "MAS" : [ {
+    "name" : "as-bm-watson-MAS",
+    "label" : "MAS",
+    "plan" : "Standard",
+    "credentials" : {
+      "admin_url" : "https://mobile.ng.bluemix.net/masui/v1/apps/d0d663f1-ebaa-4800-bb4d-5c38a5a4d789"
+    }
+  } ],
+  "Push" : [ {
+    "name" : "as-bm-watson-Push",
+    "label" : "Push",
+    "plan" : "Standard",
+    "credentials" : {
+      "url" : "https://mobile.ng.bluemix.net/push/v1/apps/d0d663f1-ebaa-4800-bb4d-5c38a5a4d789",
+      "admin_url" : "https://mobile.ng.bluemix.net/pushconsole/v1/apps/d0d663f1-ebaa-4800-bb4d-5c38a5a4d789"
+    }
+  } ],
+  "MobileData" : [ {
+    "name" : "as-bm-watson-MobileData",
+    "label" : "MobileData",
+    "plan" : "Shared",
+    "credentials" : {
+      "admin_url" : "https://mobile.ng.bluemix.net/dataview/v1/apps/d0d663f1-ebaa-4800-bb4d-5c38a5a4d789"
+    }
+  } ],
+  "question_and_answer" : [ {
+    "name" : "Question and Answer-pi",
+    "label" : "question_and_answer",
+    "plan" : "question_and_answer_free_plan",
+    "credentials" : {
+      "url" : "https://gateway.watsonplatform.net/question-and-answer-beta/api",
+      "username" : "aaeed2b7-69a8-445d-a4c5-144d78c0b6b2",
+      "password" : "osPWTRtvb5Dn"
+    }
+  } ]
+}

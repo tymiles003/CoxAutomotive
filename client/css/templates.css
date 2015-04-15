@@ -1,0 +1,1130 @@
+@charset "utf-8";
+/****************************************************************************************
+*
+*  @version (.1)
+*  @date (2015)
+*
+*  1.) LOGIN TEMPLATE _______________________ @loginTmpl
+*  2.) NEW ACCOUNT TEMPLATE _________________ @newAcctTmpl
+*  3.) SETTINGS TEMPLATE ____________________ @settingsTmpl
+*  4.) SELECT A VEHICLE TEMPLATE ____________ @selectTmpl
+*  5.) LOCATION TEMPLATE ____________________ @locationTmpl
+*  6.) VEHICLE REPORT TEMPLATE ______________ @vehicleReportTmpl
+*  7.) SLIDER MODAL _________________________ @sliderModal
+*  8.) VEHICLE MODAL ________________________ @vehicleModal
+*
+*****************************************************************************************/
+.headerTitle {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.row1,
+.row2,
+.row3 {
+	display: table;
+	width: 100%;
+	height: auto;
+	margin: 2em auto;
+}
+.row1 {
+	margin: 0 auto 2em;
+}
+.pref-row-1 {
+	display: table;
+	text-align: center;
+	width: 73%;
+	height: auto;
+	margin: 0 auto;
+}
+.pref-row-2 {
+	display: table;
+	text-align: center;
+	width: 73.5%;
+	height: auto;
+	margin: 0 auto;
+}
+.strong {
+	font-weight: 700;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+/*********************************************
+*  LOGIN TEMPLATE                   @loginTmpl
+**********************************************/
+#loginScreen,
+#createAcctScreen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#loginWrapper {
+	width: 45em;
+	height: 24em;
+	background-color: rgba(255,255,255,0.75);
+	margin: 0 auto;
+}
+#coxAutoLogo {
+	background: url('../images/cox-logo.png') no-repeat left center;
+	background-size: contain;
+	width: 45em;
+	height: 7em;
+	margin: 3em auto 0.5em;
+}
+#loginTitle {
+	background-color: #1a80b6;
+	color: #fff;
+	padding: 0.25em 0.25em 0.25em 1em;
+}
+#loginTitle h1 {
+	padding: 0.25em;
+	margin: 0;
+	line-height: 1.5em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+#loginWrapper form {
+	padding: 2em;
+	text-align: left;
+	width: 30em;
+	margin: 0 auto;
+}
+#loginWrapper form label,
+#newAcctWrapper form label {
+	font-size: 1.2em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+#username,
+#password,
+#username2,
+#firstname,
+#lastname,
+#email,
+#password2 {
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+	border: none;
+	border-radius: 0;
+	color: #333333;
+	height: 2.5em;
+	background-color: #d5d6d7;
+}
+#username:focus,
+#password:focus,
+#username2:focus,
+#firstname:focus,
+#lastname:focus,
+#email:focus,
+#password2:focus {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(26, 128, 182, 1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(26, 128, 182, 1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(26, 128, 182, 1);
+}
+#loginPara {
+	font-size: 1.1em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	text-align: left;
+	width: 50%;
+	float: left;
+}
+#loginPara a {
+	text-decoration: underline;
+	font-weight: 700;
+	color: #000;
+}
+
+/*********************************************
+*  NEW ACCOUNT TEMPLATE           @newAcctTmpl
+**********************************************/
+#newAcctHeader {
+	background: #282A2B url('../images/Cox.png') no-repeat center left;
+	background-size: 50% 100%;
+	-webkit-box-shadow: 0px 10px 15px 0px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 10px 15px 0px rgba(255,255,255,1);
+	box-shadow: 0px 10px 15px 0px rgba(255,255,255,1);
+	padding: 1em;
+	text-align: center;
+	height: 9.8em;
+	width: 100%;
+	display: table;
+}
+#newAcctWrapper {
+	width: 45em;
+	height: 33em;
+	margin: 0 auto;
+	text-align: center;
+	background-color: rgba(255,255,255,0.75);
+}
+#newAcctWrapper .form-group {
+	margin-bottom: 5px !important;
+}
+#newAcctWrapper form {
+	padding: 2em 4em;
+	text-align: left;
+	height: 100%;
+}
+#newAcctWrapper form input[type=button] {
+	display: inline-block;
+	float: right;
+	margin-left: 0.5em;
+}
+.floatCancel {
+	display: inline-block;
+	float: right;
+	margin-left: 0.5em;
+}
+.userMsgSuccess {
+	clear: both;
+	color: rgb(0, 133, 0);
+	font-weight: 700;
+}
+.userMsgError {
+	clear: both;
+	color: rgb(255, 0, 0);
+	font-weight: 700;
+}
+.additionalTop {
+	margin-top: 1.75em;
+}
+.select-style {
+	padding: 0;
+	margin: 0;
+	width: 13em;
+	height: 2.8em;
+	overflow: hidden;
+	background: #d5d6d7 url('../images/select-box-down-arrow.png') no-repeat right 1em center;
+	background-size: 10%;
+	display: inline-block;
+	float: left;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.select-style select {
+	font-size: 1.2em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+	padding: 0 8px;
+	width: 130%;
+	height: 2.5em;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.select-style select option {
+	font-size: 1.2em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+	background-color: #d5d6d7;	
+	outline: none;
+	border: none;
+}
+.select-style select:focus {
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+}
+
+/*********************************************
+*  SETTINGS TEMPLATE             @settingsTmpl
+**********************************************/
+#vehiclePreferencesWrapper {
+	margin-top: 5em;
+	height: 33em;
+	background-color: rgba(255,255,255,0.8);
+	position: relative;
+}
+#vehiclePreferencesWrapper .bodyStyleWrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 2em;
+}
+#prefBtnWrapper {
+	position: absolute;
+	bottom: 7.25em;
+	right: 10em;
+}
+#prefBtnWrapper > .automotiveBtn {
+	width: 9em;
+}
+#vehiclePreferencesWrapper label {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+#vehiclePreferencesWrapper .pref-row-1 label {
+	width: 20%;
+}
+#vehiclePreferencesWrapper .pref-row-2 label {
+	width: 25%;
+}
+#vehiclePreferencesWrapper .iconWrapper {
+	height: 12em;
+	width: 12em;
+}
+#vehiclePreferencesWrapper .iconWrapper p {
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.35em;
+	color: #000;
+	text-align: center;
+	height: 20%;
+}
+#vehiclePreferencesWrapper label > input:checked + .iconWrapper {
+	background-color: rgba(49,129,182,0.4);
+}
+#price {
+	background: url('../images/preferenceIcons/price.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#fuel {
+	background: url('../images/preferenceIcons/fuel.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#safety {
+	background: url('../images/preferenceIcons/safety.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#performance {
+	background: url('../images/preferenceIcons/performance.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#condition {
+	background: url('../images/preferenceIcons/condition.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#comfort {
+	background: url('../images/preferenceIcons/comfort.png') center center no-repeat;
+	background-size: 75% auto;
+}
+#vehiclePreferencesWrapper label > input[type=checkbox] { 
+  	visibility: hidden; 
+	position: absolute; 
+}
+#vehiclePreferencesWrapper label > input + .iconWrapper span { 
+  	cursor: pointer;
+  	height: 135px;
+	width: 168px;
+	display: block;
+   	-webkit-user-select: none; 
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -ms-user-select: none; 
+}
+
+/*********************************************
+*  SELECT A VEHICLE TEMPLATE       @selectTmpl
+**********************************************/
+#vehicleSelectWrapper {
+	height: 100%;
+}
+#vehicleSelectWrapper .bodyStyleWrapper {
+	display: block;
+	width: 100%;
+	height: 31em;
+	padding: 1em;
+	margin-top: 6em;
+	background-color: rgba(255,255,255,0.8);
+}
+#vehicleSelectWrapper label {
+	display: table-cell;
+	width: 20%;
+	padding-left: 2.6em;
+	padding-right: 2.6em;
+}
+#vehicleSelectWrapper label > input { 
+  	visibility: hidden; 
+	position: absolute; 
+}
+#vehicleSelectWrapper label > input + figure img { 
+  	cursor: pointer;
+  	opacity: 0.35;
+  	width: 100%;
+}
+#vehicleSelectWrapper label > input:checked + figure img {
+	opacity: 1;
+}
+#buttonWrapper {
+	position: absolute;
+	bottom: 16.75em;
+	right: 3.6em;
+}
+#vehicleSelectWrapper figcaption {
+	text-align: center;
+	background-color: #358CC4;
+	color: #FFF;
+	padding: 0.1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+#vehicleSelectWrapper figcaption img {
+	height: auto;
+	width: 40%;
+}
+
+/*********************************************
+*  LOCATION TEMPLATE             @locationTmpl
+**********************************************/
+.location-group {
+	display: block;
+	width: 100%;
+	height: 3.3em;
+	margin-bottom: 3em;
+}
+#settingsWrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+#locationWrapper {
+	width: 75%;
+	height: 24em;
+	background-color: #FFF;
+	padding: 4em;
+	margin: 8em auto 0;
+	border: 1px solid #000;
+}
+#locationWrapper label {
+	max-width: 10%;
+	width: 10%;
+	float: left;
+	text-align: right;
+	padding-right: 1em;
+	font-size: 1.5em;
+	line-height: 1.6em;
+}
+#locationWrapper input {
+	display: inline-block;
+	max-width: 90%;
+	width: 90%;
+	float: right;
+	font-size: 1.5em;
+	height: 2.25em;
+	padding-left: 1em;
+	border: 1px solid #000;
+}
+.state-style {
+	padding: 0;
+	margin: 0;
+	border: 1px solid #000;
+	width: 90%;
+	height: 3.3em;
+	overflow: hidden;
+	background: #FFF url('../images/state-drop-down-arrow.png') no-repeat right 1em center;
+	background-size: 2.3em auto;
+	display: inline-block;
+	float: left;
+}
+.state-style select {
+	padding: 0 8px;
+	width: 100%;
+	height: 1.9em;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	font-size: 1.5em;
+	color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.state-style select:focus {
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 5px 1px rgba(22,185,240,1);
+}
+
+/*********************************************
+*  VEHICLE REPORT TEMPLATE  @vehicleReportTmpl
+**********************************************/
+#reportWrapper {
+	height: 43.25em;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+#reportWrapper .bodyStyleWrapper {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 1em;
+}
+#reportWrapper .headerTitle {
+	right: -1em;
+}
+#option-comfort {
+	background: url('../images/comfort-small.png') no-repeat center center;
+	background-size: contain;
+}
+#option-condition {
+	background: url('../images/condition-small.png') no-repeat center center;
+	background-size: contain;
+}
+#option-fuel_eff {
+	background: url('../images/fuel-efficiency-small.png') no-repeat center center;
+	background-size: contain;
+}
+#option-safety {
+	background: url('../images/safety-small.png') no-repeat center center;
+	background-size: contain;
+}
+#option-price {
+	background: url('../images/price-small.png') no-repeat center center;
+	background-size: contain;
+}
+#option-performance {
+	background: url('../images/performance-small.png') no-repeat center center;
+	background-size: contain;
+}
+#criteriaWrapper {
+	width: 100%;
+	height: 6.25em;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#criteriaContainer {
+	display: table;
+	height: 6.45em;
+	width: 916px;
+	border-spacing: 5px 0;
+	border-collapse: separate;
+	background-color: rgba(255,255,255,0.7);
+}
+#criteriaContainer div.criteriaHeader {
+	background-color: #006098;
+	color: #FFF;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	text-align: center;
+	padding: 0.25em;
+	width: 100%;
+	display: table-caption;
+	vertical-align: middle;
+}
+#criteriaContainer span {
+	display: table-cell;
+	position: relative;
+	height: 100%;
+	width: 145px;
+	padding: 0;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	text-align: center;
+	background-color: rgba(255,255,255,0.5);
+}
+#criteriaContainer span.optIn {
+	vertical-align: bottom;
+}
+#criteriaContainer span.optOut {
+	vertical-align: middle;
+}
+#criteriaContainer a {
+	display: block;
+	font-weight: 700;
+}
+#criteriaContainer span a.removeItem {
+	padding: 0;
+	margin: 0 auto;
+	text-decoration: none;
+	color: rgb(223,10,10);
+	text-transform: uppercase;
+}
+#criteriaContainer span a.addItem {
+	padding: 0;
+	margin: 0 auto;
+	text-decoration: none;
+	color: rgb(0,164,0);
+	text-transform: uppercase;
+}
+#criteriaContainer span a.sliderAnchor {
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 0;
+	margin: 0 auto;
+	text-decoration: none;
+	background: url('../images/carat.png') center center no-repeat;
+	background-size: contain;
+	opacity: 0.6;
+	transition: all 0.2s linear 0s;
+}
+#criteriaContainer span a.sliderAnchor:hover {
+	opacity: 1;
+}
+#resultContainer {
+	float: left;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#resultContainer .wrapper {
+	height: 34.45em;
+	position: relative;
+	margin-top: 8.8em;
+}
+#resultContainer h4 {
+	background-color: #006098;
+	color: #fff;
+	padding: 0.75em;
+	margin: 0 auto;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	text-align: center;
+}
+#resultContainer .vehicleList {
+	height: 5.3em;
+	width: 100%;
+	border-bottom: 1px solid #FFF;
+	position: relative;
+	display: table;
+}
+#resultContainer div.additionalDetails {
+	height: 5em;
+	width: 650px;
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+#resultContainer div.additionalDetails .criteriaWrapper {
+	width: 80px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#resultContainer div.additionalDetails .criteriaWrapper p {
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	color: #000;
+	padding: 1.25em 0.25em 0.25em 0.25em;
+	margin: 0;
+	display: inline-block;
+	width: auto;
+	height: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#resultContainer span.detailsCell {
+	display: inline-block;
+	width: 80px;
+	vertical-align: middle;
+}
+#resultContainer span.detailsCell p {
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: normal;
+}
+#resultContainer span.detailsCell img {
+	height: 3.5em;
+	width: auto;
+	border: 1px solid #000;
+}
+#resultContainer .vehicleList label {
+	display: table;
+	width: 100%;
+	height: 100%;
+	padding-left: 0.5em;
+	background-color: rgba(255,255,255,0.8);
+	margin: 0;
+	cursor: pointer;
+}
+#resultContainer .vehicleList label:hover {
+	background-color: rgba(255,255,255,1);
+}
+#resultContainer .vehicleList label > input { 
+	visibility: hidden;
+	position: absolute;
+}
+.vehicleListBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 2em;
+}
+
+#resultContainer .vehicleList label > input + span .vehicleListBar {
+	background: #f0f0f0 url('../images/watson-icon.png') center center no-repeat;
+	background-size: 1em 1em;
+}
+#resultContainer .vehicleList label > input:hover + span .vehicleListBar,
+#resultContainer .vehicleList label > input:active + span .vehicleListBar,
+#resultContainer .vehicleList label > input:focus + span .vehicleListBar {
+	background: #006098 url('../images/watson-icon.png') center center no-repeat;
+	background-size: 1em 1em;
+	transition: background 0.2s ease;
+}
+#resultContainer .vehicleList label > input + span {
+  	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+   	-webkit-user-select: none; 
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -ms-user-select: none; 
+}
+#resultContainer .vehicleList p {
+	width: 20em;
+	height: auto;
+	padding: 0.75em 0 0.75em 0.75em;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #000;
+}
+#paginationList {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 5em;
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-ms-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+}
+#paginationList .paginationWrapper {
+	height: 100%;
+	width: 100%;
+}
+#paginationList .paginationWrapper span {
+	display: inline-block;
+	width: 14em;
+	height: 100%;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	color: #000;
+	text-align: center;
+	padding-top: 0.8em;
+	margin: 0 auto;
+	vertical-align: top;
+}
+#paginationList .paginationWrapper .arrow {
+	cursor: pointer;
+	display: inline-block;
+	height: 100%;
+	width: 24em;
+	margin: 0 auto;
+	outline: medium none;
+	z-index: 5;
+	border: none;
+	background: transparent;
+}
+#paginationList .paginationWrapper .arrow:hover {
+	cursor: pointer;
+}
+#paginationList .paginationWrapper .arrow.prev {
+	background: url('../images/prev.png') center right no-repeat;
+	opacity: 0.75;
+	transition: all 0.2s linear 0s;
+	background-size: 1.75em;
+}
+#paginationList .paginationWrapper .arrow.next[disabled=disabled][type=button],
+#paginationList .paginationWrapper .arrow.prev[disabled=disabled][type=button] {
+	opacity: 0.2;
+}
+#paginationList .paginationWrapper .arrow.next {
+	background: url('../images/next.png') center left no-repeat;
+	opacity: 0.75;
+	transition: all 0.2s linear 0s;
+	background-size: 1.75em;
+}
+#paginationList .paginationWrapper .arrow.prev:hover{
+    opacity:1;
+}
+#paginationList .paginationWrapper .arrow.next:hover{
+    opacity:1;
+}
+#vehicleResultContent {
+	position: absolute;
+	top: 6.55em;
+	left: 12.45em;
+	width: 53.1em;
+	height: 34.15em;
+	background-color: rgba(255,255,255,0.8);
+}
+#vehicleResultContent .vehicleSpecs {
+	float: left;
+	width: 25em;
+	padding: 0.5em;
+	margin-top: 1em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+}
+#vehicleResultContent .vehicleSpecs h1 {
+	font-weight: 700;
+}
+#vehicleResultContent .vehiclePhotos {
+	float: right;
+	width: 25em;
+	margin-top: 1em;
+	text-align: center;
+}
+#vehicleResultContent .vehiclePhotos img {
+	height: 200px;
+	width: auto;
+	border: 1px solid #000;
+	margin: 0 auto;
+}
+#vehicleResultContent .vehiclePhotos span img {
+	height: auto;
+	width: 50px;
+	border: 1px solid #000;
+}
+
+/*********************************************
+*  SLIDER MODAL                   @sliderModal
+**********************************************/
+.modal-open {
+	padding-right: 0px !important; /*bootstrap override*/
+}
+.modal-backdrop {
+	width: 918px;
+	height: 691px;
+	margin: 0 auto;
+	z-index: 0 !important; /*bootstrap override*/
+}
+.modal-content {
+	width: 45em;
+	max-height: 43em;
+	margin: 0 auto;	
+}
+.modal-content form {
+	padding: 1em;
+}
+.cdbl-slider {
+	width: 75%;
+	margin: 0 auto;
+}
+.sliderModal-close {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+	font-size: 1.5em;
+	font-weight: 700;
+	color: rgba(0,0,0,0.2);
+	outline: none;
+}
+.sliderModal-close:hover {
+	color: rgba(0,0,0,0.75);
+}
+#slider {
+	position: absolute;
+	top: 1em;
+	left: 0;
+	right: 0;
+}
+#min,
+#max {
+	font-weight: 700;
+	font-size: 0.8em;
+	color: #1a80b6;
+}
+#sliderModal {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#sliderModal .modal-backdrop {
+	height: 100%;
+	width: 100%;
+}
+#sliderWrapper {
+	height: 8em;
+	position: relative;
+	margin-top: 2em;
+}
+#sliderWrapper .sliderMin {
+	width: 4em;
+	position: absolute;
+	top: 0;
+	left: 5em;
+	font-weight: 700;
+	font-size: 0.8em;
+}
+#sliderWrapper .sliderMax {
+	width: 4em;
+	position: absolute;
+	top: 0;
+	right: 5em;
+	font-weight: 700;
+	font-size: 0.8em;
+}
+
+/*********************************************
+*  VEHICLE MODAL                 @vehicleModal
+**********************************************/
+
+#modalHeader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4em;
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	color: #FFF;
+	border-radius: 6px 6px 0 0;
+}
+#modalHeader h3 {
+	margin: 0.6em auto;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+}
+#modalHeader .vehicleModal-close {
+	position: absolute;
+	top: 0;
+	right: 0.25em;
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+	font-size: 2.5em;
+	font-weight: 700;
+	color: rgba(255,255,255,0.7);
+	outline: none;
+}
+#modalHeader .vehicleModal-close:hover {
+	color: rgba(255,255,255,1);
+}
+#sliderImages {
+	margin-top: 4.05em;
+  	padding-top: 0.25em;
+}
+#sliderImages .arrow {
+    cursor: pointer;
+    display: block;
+    height: 64px;
+    margin-top: -35px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    z-index: 5;
+}
+#sliderImages .arrow:hover {
+	cursor: pointer;
+}
+#sliderImages .arrow.prev {
+	background: url('../images/prev.png') center center no-repeat;
+	opacity: 0.6;
+	transition: all 0.2s linear 0s;
+	left: -5em;
+	background-size: 35%;
+}
+#sliderImages .arrow.next {
+	background: url('../images/next.png') center center no-repeat;
+	opacity: 0.6;
+	transition: all 0.2s linear 0s;
+	right: -5em;
+	background-size: 35%;
+}
+#sliderImages .arrow.prev:hover{
+    opacity:1;
+}
+#sliderImages .arrow.next:hover{
+    opacity:1;
+}
+#sliderImages .nav {
+	display: inline-block;
+	height: 6.5em;
+	width: 24em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	z-index: 5;
+	position: absolute;
+	top: 14.5em;
+	left: 10.4em;
+}
+#sliderImages .nav li {
+	border: 2px solid #000;
+	cursor: pointer;
+	display: inline-block !important;
+	height: auto;
+	width: 2em;
+	margin: 0.2em;
+}
+#sliderImages .nav li img {
+	width: 100%;
+	height: 2em;
+	opacity: 0.5;
+}
+#sliderImages .nav li.active {
+    border: 2px solid #1a80b6;
+}
+#sliderImages .nav li.active img {
+    opacity: 1;
+}
+#sliderImages .slider {
+	border: 1px solid #000;
+	height: 10em;
+	width: 15em;
+	text-align: center;
+	margin: 0 auto 1em;
+	position: relative;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-ms-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+}
+#sliderImages .slider img {
+	width: 100%;
+	height: 100%;
+}
+#sliderImages .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#sliderImages .slide.ng-hide-add {
+    opacity:1;
+
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+
+    -webkit-transform: rotateX(50deg) rotateY(30deg);
+    -moz-transform: rotateX(50deg) rotateY(30deg);
+    -ms-transform: rotateX(50deg) rotateY(30deg);
+    -o-transform: rotateX(50deg) rotateY(30deg);
+    transform: rotateX(50deg) rotateY(30deg);
+
+    -webkit-transform-origin: right top 0;
+    -moz-transform-origin: right top 0;
+    -ms-transform-origin: right top 0;
+    -o-transform-origin: right top 0;
+    transform-origin: right top 0;
+}
+#sliderImages .slide.ng-hide-add.ng-hide-add-active {
+    opacity:0;
+}
+#sliderImages .slide.ng-hide-remove {
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+
+    display:block!important;
+    opacity:0;
+}
+#sliderImages .slide, .slide.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}
+#vehicleSpecs {
+	height: 24em;
+	margin-top: 9.4em;
+	font-size: 0.9em;
+	font-family: 'Helvetica Neue Light', Arial, sans-serif;
+}
+#vehicleSpecs h3 {
+	margin: 0.5em auto;
+	padding: 0;
+	color: #000;
+	font-weight: 700;
+}
+#vehicleSpecs ul {
+	width: 100%;
+	height: 2.9em;
+	margin: 0 auto;
+	padding: 0 1em;
+	display: table;
+}
+#vehicleSpecs ul li {
+	font-weight: bold;
+	list-style-type: none;
+	background-color: #BCBCBC;
+	color: #000;
+	text-transform: uppercase;
+	font-family: Arial, sans-serif;
+	width: 50%;
+	font-size: 1em;
+	height: auto;
+	display: table-cell;
+	vertical-align: middle;
+}
+#vehicleSpecs ul li ul {
+	padding: 0;
+}
+#vehicleSpecs ul li ul li {
+	font-weight: normal;
+	list-style-type: none;
+	border-bottom: none;
+	background-color: #EDEDED;
+	width: 100%;
+	padding: 0 1em;
+	color: #000;
+	text-transform: none;
+	letter-spacing: 0;
+}

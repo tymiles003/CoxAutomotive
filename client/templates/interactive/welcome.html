@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-md-8 col-xs-12 bs-callout bs-callout-primary">
+			<form method="get" class="speech-form form-horizontal">
+				<div class="row" style="display:none">
+
+					<textarea id="textArea" name="text" rows="6" required class="form-control tts" readonly></textarea>
+					<div style="display:none">
+						<input type="text" id="txtTtsQuestionIndex" name="txtTtsQuestionIndex" value="1" ng-model="interactiveResponse.ttsQuestionIndex">
+						<input type="text" id="txtTtsAnswer" name="txtTtsAnswer" ng-model="interactiveResponse.ttsAnswer">
+						<input type="button" id="btnTtsAnswer" name="btnTtsAnswer" value="Capture" class="capture-button" ng-click="captureResponse()">	
+						<input type="button" id="btnNext" name="btnNext" value="Next">	
+					</div>
+				</div>
+
+				<div class="row">
+					<!--<div class="col-lg-4 col-xs-4 download-container">
+						<input value="Download" class="btn btn-block download-button">
+					</div>-->
+					<div class="col-lg-4 col-xs-4 text-center"></div>
+					<div class="col-lg-4 col-xs-4 ie-speak" style="display: none">
+						<input type="button" id="ttsSpeak" name="ttsSpeak" value="Speak" class="btn btn-block speak-button">
+					</div>
+				</div>
+				<div style="display: none">
+					<div class="microphone" style="margin: 50px 0 0 0">
+						<div class="micButton-preload"></div>
+						<div class="micButton"></div>
+						<!--<p class="micText">Press to start speaking</p>-->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- PRODUCING THE SOUND PLAYBACK -->
+	<div class="text-center" style="display:none">
+		<audio autoplay preload="auto" autobuffer controls class="audio"></audio>
+	</div>
+	<div style="float: left; width: 500px">
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{factors|json}}</pre>
+		</div>
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{selectedCar.options|json}}</pre>
+		</div>						
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="../../../js/watson/watson-tts.js"></script>
+<script type="text/javascript" src="../../../js/watson/watson-stt.js"></script>

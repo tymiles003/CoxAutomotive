@@ -1,0 +1,17 @@
+<!-- ============ -->
+<!-- SLIDER MODAL -->
+<form role="form">
+	<button type="button" class="sliderModal-close" data-ng-click="cancel()" aria-hidden="true">&#88;</button>
+		<div class="form-group">
+			Name: {{selected.name}}: {{currentRange[0]}} - {{currentRange[1]}}<br>
+			<div id="sliderWrapper">
+				<div class="sliderMin">{{sliderConfig.min}}</div>
+				<div class="sliderMax">{{sliderConfig.max}}</div>
+				<div slider config="sliderConfig" model="currentRange" class="cdbl-slider" id="slider"></div>
+				<div id="min"></div>
+				<div id="max"></div>
+			</div>
+		</div>
+		<button type="reset" class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+		<button type="submit" class="btn btn-default" data-ng-click="updateValues(selected.name,currentRange);cancel()">Update</button>
+</form>

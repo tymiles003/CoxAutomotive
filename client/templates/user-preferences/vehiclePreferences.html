@@ -1,0 +1,129 @@
+<div id="vehiclePreferencesWrapper" ui-view="content" autoscroll="false">
+	<div class="bodyStyleWrapper">
+		<p id="prefNotice">You must select at least two preferences</p>
+		<!-- ===================== -->
+		<!-- PREFERENCE SELECTIONS -->
+		<div class="pref-row-1">
+			<!-- ..... -->
+			<!-- price -->
+			<label>
+				<input type="checkbox" name="preferences" value="price" ng-model="factors.price"/>
+				<div class="iconWrapper">
+					<span id="price"></span>
+					<p>Price</p>
+				</div>
+			</label>
+			<!-- ............... -->
+			<!-- fuel efficiency -->
+			<label>
+				<input type="checkbox" name="preferences" value="fuel" ng-model="factors.fuel_eff" />
+				<div class="iconWrapper">
+					<span id="fuel"></span>
+					<p>Fuel</p>
+				</div>
+			</label>
+			<!-- ...... -->
+			<!-- safety -->
+			<label>
+				<input type="checkbox" name="preferences" value="safety" ng-model="factors.safety" />
+				<div class="iconWrapper">
+					<span id="safety"></span>
+					<p>Safety</p>
+				</div>
+			</label>
+			<!-- ........... -->
+			<!-- performance -->
+			<label>
+				<input type="checkbox" name="preferences" value="performance" ng-model="factors.performance" />
+				<div class="iconWrapper">
+					<span id="performance"></span>
+					<p>Performance</p>
+				</div>
+			</label>
+		</div>
+
+
+		<div class="pref-row-2">
+			<!-- ......... -->
+			<!-- condition -->
+			<label>
+				<input type="checkbox" name="preferences" value="condition" ng-model="factors.condition" />
+				<div class="iconWrapper">
+					<span id="condition"></span>
+					<p>Condition</p>
+				</div>
+			</label>
+			<!-- ....... -->
+			<!-- comfort -->
+			<label>
+				<input type="checkbox" name="preferences" value="comfort" ng-model="factors.comfort" />
+				<div class="iconWrapper">
+					<span id="comfort"></span>
+					<p>Comfort</p>
+				</div>
+			</label>
+			<!-- .......... -->
+			<!-- empty cell -->
+			<label><div class="iconWrapper">&nbsp;</div></label>
+			<!-- ........... -->
+			<!-- next button -->
+			<div id="prefBtnWrapper">
+				<input type="button" value="Next" class="automotiveBtn" ng-click="setPrefences()">
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="container" style="display: none">
+	<div class="row">
+		<div class="col-lg-8 col-md-8 col-xs-12 bs-callout bs-callout-primary">
+			<form method="get" class="speech-form form-horizontal">
+				<div class="row" style="display:none">
+
+					<textarea id="textArea" name="text" rows="6" required class="form-control tts" readonly></textarea>
+					<div style="display:none">
+						<input type="text" id="txtTtsQuestionIndex" name="txtTtsQuestionIndex" value="1" ng-model="interactiveResponse.ttsQuestionIndex">
+						<input type="text" id="txtTtsAnswer" name="txtTtsAnswer" ng-model="interactiveResponse.ttsAnswer">
+						<input type="button" id="btnTtsAnswer" name="btnTtsAnswer" value="Capture" class="capture-button" ng-click="captureResponse()">	
+						<input type="button" id="btnNext" name="btnNext" value="Next">	
+					</div>
+				</div>
+
+				<div class="row">
+					<!--<div class="col-lg-4 col-xs-4 download-container">
+						<input value="Download" class="btn btn-block download-button">
+					</div>-->
+					<div class="col-lg-4 col-xs-4 text-center"></div>
+					<div class="col-lg-4 col-xs-4 ie-speak" style="display: none">
+						<input type="button" id="ttsSpeak" name="ttsSpeak" value="Speak" class="btn btn-block speak-button">
+					</div>
+				</div>
+				<div style="display: none">
+					<div class="microphone" style="margin: 50px 0 0 0">
+						<div class="micButton-preload"></div>
+						<div class="micButton"></div>
+						<!--<p class="micText">Press to start speaking</p>-->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- PRODUCING THE SOUND PLAYBACK -->
+	<div class="text-center" style="display:none">
+		<audio autoplay preload="auto" autobuffer controls class="audio"></audio>
+	</div>
+	<div style="float: left; width: 500px">
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{factors|json}}</pre>
+		</div>
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{selectedCar.options|json}}</pre>
+		</div>						
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="../../../js/watson/watson-tts.js"></script>
+<script type="text/javascript" src="../../../js/watson/watson-stt.js"></script>

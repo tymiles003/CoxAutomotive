@@ -1,0 +1,211 @@
+<div id="vehicleSelectWrapper" ui-view="content" autoscroll="false">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="bodyStyleWrapper">
+		<p id="selectNotice">Select a Vehicle Type</p>
+		<!-- ======= -->
+		<!-- TOP ROW -->
+		<div class="row1">
+			<!-- ..... -->
+			<!-- coupe -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="coupe" ng-model="selectedCar.options.coupe" />
+				<figure>
+					<img src="../../images/vehicleTypes/coupe.png" alt="Coupe" />
+				</figure>
+				<figcaption>Coupe</figcaption>
+			</label>
+			<!-- ..... -->
+			<!-- sedan -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="sedan" ng-model="selectedCar.options.sedan" />
+				<figure>
+					<img src="../../images/vehicleTypes/sedan.png" alt="" />
+				</figure>
+				<figcaption>Sedan</figcaption>
+			</label>
+			<!-- ..... -->
+			<!-- truck -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="truck" ng-model="selectedCar.options.truck" />
+				<figure>
+					<img src="../../images/vehicleTypes/truck.png" alt="" />
+				</figure>
+				<figcaption>Truck</figcaption>
+			</label>
+			<!-- ... -->
+			<!-- suv -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="suv" ng-model="selectedCar.options.suv" />
+				<figure>
+					<img src="../../images/vehicleTypes/suv.png" alt="" />
+				</figure>
+				<figcaption>SUV</figcaption>
+			</label>
+			<!-- ... -->
+			<!-- van -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="minivan" ng-model="selectedCar.options.minivan" />
+				<figure>
+					<img src="../../images/vehicleTypes/van.png" alt="" />
+				</figure>
+				<figcaption>Van</figcaption>
+			</label>
+		</div>
+
+		<!-- ========== -->
+		<!-- MIDDLE ROW -->
+		<div class="row2">
+			<!-- ..... -->
+			<!-- wagon -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="wagon" ng-model="selectedCar.options.wagon" />
+				<figure>
+					<img src="../../images/vehicleTypes/wagon.png" alt="" />
+				</figure>
+				<figcaption>Wagon</figcaption>
+			</label>
+			<!-- ...... -->
+			<!-- sports -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="sports" ng-model="selectedCar.options.sports" />
+				<figure>
+					<img src="../../images/vehicleTypes/sports.png" alt="" />
+				</figure>
+				<figcaption>Sports</figcaption>
+			</label>
+			<!-- ........... -->
+			<!-- convertible -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="convertible" ng-model="selectedCar.options.convertible" />
+				<figure>
+					<img src="../../images/vehicleTypes/convertible.png" alt="" />
+				</figure>
+				<figcaption>Convertible</figcaption>
+			</label>
+			<!-- ...... -->
+			<!-- hybrid -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="hybrid" ng-model="selectedCar.options.hybrid" />
+				<figure>
+					<img src="../../images/vehicleTypes/hybrid.png" alt="" />
+				</figure>
+				<figcaption>Hybrid</figcaption>
+			</label>
+			<!-- ...... -->
+			<!-- luxury -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="luxury" ng-model="selectedCar.options.luxury" />
+				<figure>
+					<img src="../../images/vehicleTypes/luxury.png" alt="" />
+				</figure>
+				<figcaption>Luxury</figcaption>
+			</label>
+		</div>
+
+		<!-- ========== -->
+		<!-- BOTTOM ROW -->
+		<div class="row3">
+			<!-- ......... -->
+			<!-- crossover -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="crossover" ng-model="selectedCar.options.crossover" />
+				<figure>
+					<img src="../../images/vehicleTypes/crossover.png" alt="" />
+				</figure>
+				<figcaption>Crossover</figcaption>
+			</label>
+			<!-- ........ -->
+			<!-- electric -->
+			<label>
+				<input type="checkbox" name="bodyStyle" value="electric" ng-model="selectedCar.options.electric" />
+				<figure>
+					<img src="../../images/vehicleTypes/electric.png" alt="" />
+				</figure>
+				<figcaption>Electric</figcaption>
+			</label>
+			<!-- ..... -->
+			<!-- empty -->
+			<label>
+				<p>&nbsp;</p>
+			</label>
+			<!-- ..... -->
+			<!-- empty -->
+			<label>
+				<p>&nbsp;</p>
+			</label>
+			<!-- ..... -->
+			<!-- empty -->
+			<label>
+				<p>&nbsp;</p>
+			</label>
+		</div>
+		<!-- ........... -->
+		<!-- next button -->
+		<div id="buttonWrapper">
+			<input type="button" value="Next" class="automotiveBtn" ng-click="getCarsByType()" style="width:9em;">
+		</div>
+	</div>
+</div>
+
+<div class="container" style="display: none">
+	<div class="row">
+		<div class="col-lg-8 col-md-8 col-xs-12 bs-callout bs-callout-primary">
+			<form method="get" class="speech-form form-horizontal">
+				<div class="row" style="display:none">
+
+					<textarea id="textArea" name="text" rows="6" required class="form-control tts" readonly></textarea>
+					<div style="display:none">
+						<input type="text" id="txtTtsQuestionIndex" name="txtTtsQuestionIndex" value="7" ng-model="interactiveResponse.ttsQuestionIndex">
+						<input type="text" id="txtTtsAnswer" name="txtTtsAnswer" ng-model="interactiveResponse.ttsAnswer">
+						<input type="button" id="btnTtsAnswer" name="btnTtsAnswer" value="Capture" class="capture-button" ng-click="captureResponse()">	
+						<input type="button" id="btnNext" name="btnNext" value="Next">	
+					</div>
+				</div>
+
+				<div class="row">
+					<!--<div class="col-lg-4 col-xs-4 download-container">
+						<input value="Download" class="btn btn-block download-button">
+					</div>-->
+					<div class="col-lg-4 col-xs-4 text-center"></div>
+					<div class="col-lg-4 col-xs-4 ie-speak" style="display: none">
+						<input type="button" id="ttsSpeak" name="ttsSpeak" value="Speak" class="btn btn-block speak-button">
+					</div>
+				</div>
+				<div style="display: none">
+					<div class="microphone" style="margin: 50px 0 0 0">
+						<div class="micButton-preload"></div>
+						<div class="micButton"></div>
+						<!--<p class="micText">Press to start speaking</p>-->
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- PRODUCING THE SOUND PLAYBACK -->
+	<div class="text-center" style="display:none">
+		<audio autoplay preload="auto" autobuffer controls class="audio"></audio>
+	</div>
+	<div style="float: left; width: 500px">
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{factors|json}}</pre>
+		</div>
+		<div style="float: left; width: 250px">
+			DEBUG:<pre>{{selectedCar.options|json}}</pre>
+		</div>						
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="../../../js/watson/watson-tts.js"></script>
+<script type="text/javascript" src="../../../js/watson/watson-stt.js"></script>

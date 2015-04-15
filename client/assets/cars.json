@@ -1,0 +1,287 @@
+{
+    "subject": "car",
+    "columns": [
+        {
+            "key": "price",
+            "full_name": "Price ($US)",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MIN"
+        },
+        {
+            "key": "fuel_eff",
+            "full_name": "Fuel Efficiency",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "safety",
+            "full_name": "Safety Rating",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "comfort",
+            "full_name": "Comfort Level",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "condition",
+            "full_name": "Condition",
+            "type": "NUMERIC",
+            "is_objective": false,
+            "goal": "MAX"
+        },
+        {
+            "key": "performance",
+            "full_name": "Perfomance",
+            "type": "NUMERIC",
+            "is_objective": false,
+            "goal": "MAX"
+        }
+    ],
+    "options": [
+        {
+            "key": " 1",
+            "name": "Audi A3",
+            "values": {
+                "price": 38600,
+                "fuel_eff": 23,
+                "performance": 220,
+                "comfort": 6,
+                "condition": 9,
+                "safety": 4.75,
+                "winter": 8
+            }, 
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC50AUC152A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC50AUC152A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "2",
+            "name": "Acura ILX",
+            "values": {
+                "price": 29200,
+                "fuel_eff": 24,
+                "performance": 201,
+                "comfort": 4.5,
+                "condition": 7.5,
+                "safety": 4.7,
+                "winter": 7
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC50ACC141A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/><a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC50ACC141A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "3",
+            "name": "Mazda 6",
+            "values": {
+                "price": 29695,
+                "fuel_eff": 25,
+                "performance": 184,
+                "comfort": 4.5,
+                "condition": 7.5,
+                "safety": 4.75,
+                "winter": 7
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40MAC141B121001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40MAC141B121001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "4",
+            "name": "Acura RLX",
+            "values": {
+                "price": 48450,
+                "fuel_eff": 20,
+                "performance": 310,
+                "comfort": 7.5,
+                "condition": 10,
+                "safety": 5,
+                "winter": 8
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC40ACC161A221001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC40ACC161A221001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "5",
+            "name": "Chevrolet Camaro",
+            "values": {
+                "price": 35155,
+                "fuel_eff": 19,
+                "performance": 323,
+                "comfort": 6,
+                "condition": 9,
+                "safety": 5,
+                "winter": 6
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC40CHC021B021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC40CHC021B021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "6",
+            "name": "Hyundai Equus",
+            "values": {
+                "price": 61250,
+                "fuel_eff": 15,
+                "performance": 429,
+                "comfort": 9,
+                "condition": 10,
+                "safety": 4.5,
+                "winter": 7
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC40HYC141A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC40HYC141A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "7",
+            "name": "BMW M5",
+            "values": {
+                "price": 92900,
+                "fuel_eff": 14,
+                "performance": 560,
+                "comfort": 10,
+                "condition": 10,
+                "safety": 5,
+                "winter": 9
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40BMC171A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40BMC171A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "8",
+            "name": "Toyota Corolla",
+            "values": {
+                "price": 21300,
+                "fuel_eff": 28,
+                "performance": 140,
+                "comfort": 3,
+                "condition": 7.5,
+                "safety": 4.8,
+                "winter": 6
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40TOC041C021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40TOC041C021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "9",
+            "name": "Fiat 500L",
+            "values": {
+                "price": 24395,
+                "fuel_eff": 24,
+                "performance": 160,
+                "comfort": 4.5,
+                "condition": 7.5,
+                "safety": 4,
+                "winter": 5
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40FIC041A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40FIC041A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "10",
+            "name": "Cadillac ELR",
+            "values": {
+                "price": 75000,
+                "fuel_eff": 80,
+                "performance": 157,
+                "comfort": 9.5,
+                "condition": 10,
+                "safety": 4.5,
+                "winter": 7
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC40CAC211A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC40CAC211A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "11",
+            "name": "Chevrolet Impala",
+            "values": {
+                "price": 35905,
+                "fuel_eff": 19,
+                "performance": 305,
+                "comfort": 6,
+                "condition": 9,
+                "safety": 3.8,
+                "winter": 7
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40CHC131C021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40CHC131C021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "12",
+            "name": "Chevrolet Cruze",
+            "values": {
+                "price": 24985,
+                "fuel_eff": 22,
+                "performance": 151,
+                "comfort": 4,
+                "condition": 7.5,
+                "safety": 4.8,
+                "winter": 5
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40CHC301A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40CHC301A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "13",
+            "name": "Nissan Versa Note",
+            "values": {
+                "price": 15990,
+                "fuel_eff": 27, 
+                "performance": 109,
+                "comfort": 4,
+                "condition": 6,
+                "safety": 4.3,
+                "winter": 5
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40NIC171C121001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40NIC171C121001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "14",
+            "name": "Toyota Prius",
+            "values": {
+                "price": 25300,
+                "fuel_eff": 53,
+                "performance": 110,
+                "comfort": 4,
+                "condition": 7.5,
+                "safety": 4.8,
+                "winter": 5
+            },
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC20TOC161A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=CAC40TOC041C021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "15",
+            "name": "Civic Hybrid",
+            "values": {
+                "price": 28600,
+                "fuel_eff": 38,
+                "performance": 150,
+                "comfort": 6,
+                "condition": 7.5,
+                "safety": 4.75,
+                "winter": 6
+            }, 
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=USC50HOC071A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC50AUC152A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "16",
+            "name": "Subaru Outback",
+            "values": {
+                "price": 32995,
+                "fuel_eff": 25,
+                "performance": 256,
+                "comfort": 8,
+                "condition": 10,
+                "safety": 4.75,
+                "winter": 10
+            }, 
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC50SUC022E021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC50AUC152A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        },
+        {
+            "key": "17",
+            "name": "Grand Cherokee",
+            "values": {
+                "price": 29995,
+                "fuel_eff": 17,
+                "performance": 240,
+                "comfort": 7,
+                "condition": 10,
+                "safety": 4.75,
+                "winter": 10
+            }, 
+            "description_html": "<img style='max-height: 100px; max-width: 100px;'  src='http://car-pictures.cars.com/images/?IMG=CAC40JES051B021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1'/> <a title='Photo by Cars.com' href='http://car-pictures.cars.com/images/?IMG=USC50AUC152A021001.png&WIDTH=624&HEIGHT=300&AUTOTRIM=1' target='_blank'> <img style='max-height: 14px; max-width: 14px;'  src='http://mirrors.creativecommons.org/presskit/icons/cc.png'/> </a>"
+        }
+    ]
+}

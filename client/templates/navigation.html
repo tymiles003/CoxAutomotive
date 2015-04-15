@@ -1,0 +1,25 @@
+<div>
+	<!-- ====================== -->
+	<!-- APPLICATION NAVIGATION -->
+	<nav id="watsonAutoNav">
+		<ul>
+			<li id="firstCol">
+				<p>IBM Watson for Automotive Advising</p>
+			</li>
+			<li>
+				<a href="" id="settingsIcon" ng-click="resetPreference()"></a>
+			</li>
+			<li ng-show="isInteractive == true">
+				<a href="" id="interactiveIcon" ng-click="toggleInteractive()"></a>
+			</li>
+			<li ng-show="isInteractive == false">
+				<a href="" id="interactiveIcon_disabled" ng-click="toggleInteractive()"></a>
+			</li>
+			<li>
+				<a ui-sref="/" id="navSignout">
+					<p>Sign out</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

@@ -1,0 +1,88 @@
+<!-- ===================== -->
+<!-- VEHICLE DETAILS MODAL -->
+<div id="modalHeader">
+	<h3>Specifications for {{selectedCar.main.name}}</h3>
+	<button type="button" class="vehicleModal-close" data-ng-click="cancel()" aria-hidden="true">&#88;</button>
+</div>
+<div id="sliderImages">
+	<div class="slider">
+		<img ng-repeat="photo in photos track by $index" class="slide" ng-swipe-right="previous()" ng-swipe-left="next()" ng-show="isActive($index)" ng-src="{{photo}}" />
+		<span class="arrow prev" href="#" ng-click="previous()"></span>
+		<span class="arrow next" href="#" ng-click="next()"></span>
+	</div>
+	<ul class="nav">
+		<li ng-repeat="photo in photos track by $index" ng-class="{'active':isActive($index)}">
+			<img src="{{photo}}" alt="Vehicle Photo" ng-click="showPhoto($index);" />
+		</li>
+	</ul>
+</div>
+<div id="vehicleSpecs">
+	<ul>
+		<li class="left">
+			Stock ID
+			<ul>
+				<li>{{(selectedCar.main.key) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="right">
+			Condition
+			<ul>
+				<li>{{(selectedCar.main.values.condition) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="left">
+			Price
+			<ul>
+				<li>{{(selectedCar.main.values.price | currency) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="right">
+			Year
+			<ul>
+				<li>{{(selectedCar.main.year) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="left">
+			Trim
+			<ul>
+				<li>{{(selectedCar.specs.details.trim) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="right">
+			MPG (city/highway)
+			<ul>
+				<li>{{(selectedCar.specs.details.MPG.city) || 'N/A'}}/{{(selectedCar.specs.details.MPG.highway) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="left">
+			Engine
+			<ul>
+				<li>{{(selectedCar.specs.details.engine.name) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="right">
+			Cylinder
+			<ul>
+				<li>{{(selectedCar.specs.details.engine.cylinder) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="left">
+			Horsepower
+			<ul>
+				<li>{{(selectedCar.specs.details.engine.horsepower) || 'N/A'}}</li>
+			</ul>
+		</li>
+		<li class="right">
+			Transmission
+			<ul>
+				<li>
+					<span class="strong">TYPE:&nbsp;</span>
+					{{(selectedCar.specs.details.transmission.automaticType) || 'N/A'}}
+					<br>
+					<span class="strong"># OF SPEEDS:&nbsp;</span>
+					{{(selectedCar.specs.details.transmission.numberOfSpeeds) || 'N/A'}}
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>

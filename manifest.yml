@@ -1,0 +1,16 @@
+applications:
+- services:
+  - as-bm-watson-MAS
+  - as-bm-watson-MobileData
+  - Question and Answer-pi
+  - Tradeoff Analytics-09
+  - Speech To Text-95
+  - Text to Speech-t1
+  disk_quota: 1024M
+  host: as-bm-watson
+  name: as-bm-watson
+  command: node server.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 128M

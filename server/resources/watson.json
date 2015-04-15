@@ -1,0 +1,50 @@
+{
+	"question_and_answer" : [ 
+		{
+		    "name" : "Question and Answer-pi",
+		    "label" : "question_and_answer",
+		    "plan" : "question_and_answer_free_plan",
+		    "credentials" : {
+		      "url" : "https://gateway.watsonplatform.net/question-and-answer-beta/api",
+		      "username" : "aaeed2b7-69a8-445d-a4c5-144d78c0b6b2",
+		      "password" : "osPWTRtvb5Dn"
+		    }
+	  	} 
+	],
+  	"tradeoff_analytics": [
+   	{
+      	"name": "Tradeoff Analytics-09",
+      	"label": "tradeoff_analytics",
+      	"plan": "free",
+      	"credentials": {
+            "url": "https://gateway.watsonplatform.net/tradeoff-analytics-beta/api",
+            "username": "f3aa7964-f755-4f3b-ac42-2bb574896259",
+            "password": "2sgjrReosEhg"
+      	}
+   	}
+	],
+   "text_to_speech": [
+      {
+         "name": "Text to Speech-t1",
+         "label": "text_to_speech",
+         "plan": "free",
+         "credentials": {
+            "url": "https://stream.watsonplatform.net/text-to-speech-beta/api",
+            "username": "29f6135a-d08c-4d32-8707-965a32e490e1",
+            "password": "SEJ5uTSbTIXv"
+         }
+      }
+   ],
+   "speech_to_text": [
+      {
+         "name": "Speech To Text-95",
+         "label": "speech_to_text",
+         "plan": "free",
+         "credentials": {
+            "url": "https://stream.watsonplatform.net/speech-to-text-beta/api",
+            "username": "4fd64b91-a54e-48d8-a94e-cba31229968a",
+            "password": "uCUnd36R0n49"
+         }
+      }
+   ]
+}

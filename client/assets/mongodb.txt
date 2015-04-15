@@ -1,0 +1,14 @@
+dbuser = coxauto
+dbpassword = coxauto
+
+To connect using the shell:
+	mongo ds049570.mongolab.com:49570/IbmCloud_lqiun5ia_5q3bbjue -u coxauto -p coxauto
+
+To connect using a driver via the standard URI (what's this?):
+	mongodb://coxauto:coxauto@ds049570.mongolab.com:49570/IbmCloud_lqiun5ia_5q3bbjue 
+
+
+Collection info:
+ - "cars" collection store the general information about cars (make, model, price, score info for: performance, comfort, safety, condition, fuel_eff .. including exterior and interior photos links)
+
+ - "carDetails" collection store in-depth detail about the cars (exterior/interior options, color options, etc) and the breakdowns of car ratings.

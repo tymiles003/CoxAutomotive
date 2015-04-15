@@ -1,0 +1,6 @@
+{
+    "applicationId": "d0d663f1-ebaa-4800-bb4d-5c38a5a4d789",
+    "applicationSecret": "3db546afc3c163c81cf57904d3ed1880e2a353fd",
+    "applicationRoute": "http://as-bm-watson.mybluemix.net",
+    "applicationName" : "as-bm-watson"
+}

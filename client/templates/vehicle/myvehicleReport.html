@@ -1,0 +1,89 @@
+
+<div class="bodyStyleWrapper">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div>
+		<h3>Automotive Advising Report (SAMPLE LAYOUT) 
+		<input type="button" value="Fuel" ng-click="filterByPreferenceValue('fuel_eff', 19, 28)">
+		<input type="button" value="Price" ng-click="filterByPreferenceValue('price', 15000, 30000)">
+		</h3>
+	</div>
+
+
+	<div style="float:left; width: 150px;">
+		<div style="background-color:green; width: 140px; height: 500px; float:left;">
+			<h4>Vehicle Result</h4>
+			<div ng-repeat="car in inventory.cars.included">
+				<input type="radio" id="cars_{{car.id}}" name="cars" value="{{car.id}}" ng-model="selectedCar.id" ng-click="getSelectedCar()">{{car.name}}
+			</div>
+		</div>
+	</div>
+
+	<div style="float:left; width: 750px;">
+		<div id="criteriaContainer">
+			<div>Criteria</div>
+			<span ng-repeat="match in inventory.factorOptions.optIn">
+				{{match.name}}<br> 
+				{{match.range[0]}}-{{match.range[1]}}
+				<a href="" ng-click="updateFactors(match.name, false)">remove</a>
+			</span>
+			<br>
+			<span ng-repeat="match in inventory.factorOptions.optOut">
+				{{match.name}}<br>
+				{{match.range[0]}}-{{match.range[1]}}
+					<a href="" ng-click="updateFactors(match.name, true)">add</a>
+			</span>
+		</div>
+
+		<div width="650px">
+			<div style="float:left; width: 315px">
+				<h3>Photos</h3>
+				<img src="{{selectedCar.carInfo.main.image}}" height="200px">	
+				<span ng-repeat="pic in selectedCar.carInfo.specs.images.exterior">
+					<img src="{{pic}}" width="50" border="1">
+				</span>
+				<span ng-repeat="pic in selectedCar.carInfo.specs.images.interior">
+					<img src="{{pic}}" width="50" border="1">
+				</span>
+			</div>
+			<div style="float:left;">
+				<h3>Specifications</h3>
+				<div>Stock ID: {{selectedCar.carInfo.main.key}}</div>
+				<div>Condition: {{selectedCar.carInfo.main.values.condition}}</div>
+				<div>Price: {{selectedCar.carInfo.main.values.price|currency}}</div>
+				<div>Year: {{selectedCar.carInfo.main.year}}</div>
+				<div>Trim: {{selectedCar.carInfo.specs.details.trim}}</div>
+				<div>Engine: 
+					<ul>
+						<li>{{selectedCar.carInfo.specs.details.engine.name}}</li>
+						<li>Cylinder: {{selectedCar.carInfo.specs.details.engine.cylinder}}</li>
+						<li>HP: {{selectedCar.carInfo.specs.details.engine.horsepower}}</li>
+					</ul>
+				</div>
+				<div>MPG (city/highway): {{selectedCar.carInfo.specs.details.MPG.city}}/{{selectedCar.carInfo.specs.details.MPG.highway}}</div>
+				<div>Transmission:
+					<ul>
+						<li>Type: {{selectedCar.carInfo.specs.details.transmission.automaticType}}</li>
+						<li># of speeds: {{selectedCar.carInfo.specs.details.transmission.numberOfSpeeds}}</li>
+					</ul>
+				</div>
+				<div>OTHER DETAILS</div>
+				<div>OTHER DETAILS</div>
+				<div>OTHER DETAILS</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+

@@ -1,0 +1,44 @@
+<div class="container">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<h3>Enter car data</h3>
+			<form>
+
+				<div>
+					<label>Type</label>
+					<select id="carType" ng-model="selectedCar.type">
+						<option value="suv">SUV</option>
+						<option value="sedan">Sedan</option>
+						<option value="minivan">Minivan</option>
+						<option value="hybrid">Hybrid/Electric</option>	
+					</select>
+				</div>
+
+				<input type="button" value="Submit" class="automotiveBtn" ng-click="getCarsByType()">
+			</form>
+		</div>
+		<div ng-hide="carsList === ''">
+			<div>
+				<h4>Available Cars in Inventory</h4>
+			</div>
+			<div>
+				<ul>
+					<span ng-repeat="car in carsList.options">
+						<li>{{car.year}} {{car.make}} {{car.model}} - Condition: {{car.values.condition}}</li>
+					</span>
+				</ul>	
+			</div>
+		</div>
+	</div>
+</div>

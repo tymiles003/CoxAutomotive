@@ -1,0 +1,37 @@
+<div class="container col-md-6 col-lg-6">
+<div>
+	<h4>Watson Question and Answer</h4>
+</div>
+
+<div >
+	<form>
+		<div class="form-group">
+			<label>Select Dataset:</label>
+			<select class="form-control" ng-change="resetAnswer()" ng-model="watson_dataset">
+				<option value="travel">Travel</option>
+				<option value="healthcare">Healthcare</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<input type="text" id="search" class="form-control" placeholder="Enter your question" ng-model="watson_question" name="search" value="ski trip">
+		</div>
+		<div class="form-group" ng-hide="sampleQuestion == ''">
+			Sample question: {{sampleQuestion}}
+		</div>
+		<div class="form-group">
+			<input type="button" value="Ask Watson" class="btn btn-primary" ng-click="askWatson_QuestionAnswer()">
+		</div>
+	</form>	
+</div>
+
+<div ng-hide="watson_answer == ''">
+	<h2>Answers and Confidence</h2>
+	<span  ng-repeat="answer in watson_answer">
+		<div class="form-group">
+			<div>{{answer.text}}</div>
+			<div>Confidence: {{(answer.confidence | number:2) * 100}}%</div>
+		</div>	
+	</span>
+	
+</div>
+</div>

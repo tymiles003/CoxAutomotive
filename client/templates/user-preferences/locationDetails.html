@@ -1,0 +1,24 @@
+<div id="locationWrapper">
+	<form>
+		<div class="location-group">
+			<label for="city">City</label>
+			<input type="text" id="city" name="city" placeholder="City" class="form-control" ng-model="userInfo.city">
+		</div>
+		<div class="location-group">
+			<label for="state">State</label>
+			<div class="state-style">
+				<select id="userType" name="userType" ng-model="userInfo.userType">
+					<option value="">State</option>
+					<option ng-repeat="state in stateList" value="{{state}}">{{state}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="location-group">
+			<label for="zip">Zip</label>
+			<input type="text" id="zip" name="zip" placeholder="Zip" class="form-control" ng-model="userInfo.zip">
+		</div>
+	</form>
+</div>
+<div id="buttonWrapper">
+	<input type="button" value="Next" class="automotiveBtn" ng-click="detailsOne()" style="margin-right:7em;">
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<form>
+			<div class="form-group">
+				<h3>What are important factors that determine your car purchase?</h3>
+
+				<input type="checkbox" name="price" ng-model="factors.price"> Price
+				<input type="checkbox" name="fuel_eff" ng-model="factors.fuel_eff"> Fuel Efficiency
+				<input type="checkbox" name="safety" ng-model="factors.safety"> Safety Rating
+				<input type="checkbox" name="comfort" ng-model="factors.comfort"> Comfort Level
+				<input type="checkbox" name="luxury" ng-model="factors.condition"> Condition
+				<input type="checkbox" name="HP" ng-model="factors.performance"> Performance
+			</div>
+			<div class="form-group">
+				<input type="submit" id="btnShowAnalysis" name="btnShowAnalysis" value="Show Cars Selection" ng-click="setPrefences()" class="automotiveBtn">
+			</div>
+		</form>
+	</div>
+
+</div>

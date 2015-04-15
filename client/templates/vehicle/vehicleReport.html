@@ -1,0 +1,116 @@
+<div class="bodyStyleWrapper" id="reportWrapper">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- =========== -->
+	<!-- RESULT LIST -->
+	<div id="resultContainer">
+		<div class="wrapper" ng-init="getCarDetails()">
+			<h4>Vehicle Result</h4>
+
+			<!-- list items -->
+			<div class="vehicleList" data-ng-repeat="car in inventory.cars.included | pagination: curPage * pageSize | limitTo:pageSize">
+				<label>
+					<input type="radio" id="cars_{{car.id}}" name="cars" value="{{car.id}}" data-ng-model="selectedCar.id" data-ng-click="showCarDetail();" />
+					<span>
+						<p>{{car.year}} {{car.name}}</p>
+						<div class="vehicleListBar"></div>
+					</span>
+					<div class="additionalDetails">
+						<span class="criteriaWrapper">
+							<p>
+								<span class="strong">
+									Price
+								</span>
+								<br>{{car.values.price | currency}}
+							</p>
+						</span>
+						<span class="criteriaWrapper" style="width:85px;">
+							<p>
+								<span class="strong">
+									Fuel Efficiency
+								</span>
+								<br>{{car.values.fuel_eff}}
+							</p>
+						</span>
+						<span class="criteriaWrapper">
+							<p>
+								<span class="strong">
+									Safety
+								</span>
+								<br>{{car.values.safety | number:0}}
+							</p>
+						</span>
+						<span class="criteriaWrapper">
+							<p>
+								<span class="strong">
+									Comfort
+								</span>
+								<br>{{car.values.comfort | number:0}}
+							</p>
+						</span>
+						<span class="criteriaWrapper">
+							<p>
+								<span class="strong">
+									Condition
+								</span>
+								<br>{{car.values.condition}}
+							</p>
+						</span>
+						<span class="criteriaWrapper">
+							<p>
+								<span class="strong">
+									Performance
+								</span>
+								<br>{{car.values.performance}}
+							</p>
+						</span>
+						<span class="detailsCell">
+							<img src="{{car.image}}" alt="{{car.name}}" />	
+						</span>
+					</div>
+				</label> 
+			</div>
+			<!-- .............. -->
+			<!-- pagination div -->
+			<div class="pagination-div" ng-show="inventory.cars.included.length" id="paginationList">
+				<div class="paginationWrapper">
+					<button type="button" class="arrow prev" href="#" ng-disabled="curPage == 0" ng-click="curPage=curPage-1"></button>
+				 	<span>Page<br>{{curPage + 1}} of {{ numberOfPages() }}</span>
+				 	<button type="button" class="arrow next" href="#" ng-disabled="curPage >= inventory.cars.included.length/pageSize - 1" ng-click="curPage = curPage+1"></button>
+			 	</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- ================ -->
+	<!-- CRITERIA CONTENT -->
+	<div id="criteriaWrapper">
+		<div id="criteriaContainer">
+			<div class="criteriaHeader">Criteria</div>
+			<span data-ng-repeat="match in inventory.factorOptions.optIn" data-ng-attr-id="{{ 'option-' + match.name }}" class="optIn">
+				<a href="" data-ng-click="openSliderModal(match.name,match.range[0],match.range[1])" class="sliderAnchor" title="Open the slider"></a>
+				<div class="strong">{{match.name}}</div>
+				{{match.range[0]}}-{{match.range[1]}}
+				<a href="" data-ng-click="updateFactors(match.name, false)" class="removeItem" title="Remove">Remove</a>
+			</span>
+			<span data-ng-repeat="match in inventory.factorOptions.optOut" data-ng-attr-id="{{ 'option-' + match.name }}" class="optOut">
+				<div class="strong">{{match.name}}</div>
+				<a href="" data-ng-click="updateFactors(match.name, true)" class="addItem" title="Add">Add</a>
+			</span>
+		</div>
+	</div>
+
+	<!-- =============== -->
+	<!-- MODAL VIEW HERE -->
+	<div data-ng-view></div>
+	
+</div>

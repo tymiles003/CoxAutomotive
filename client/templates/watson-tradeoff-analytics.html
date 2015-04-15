@@ -1,0 +1,43 @@
+<div>
+	<script type="text/javascript" src="../js/watson-ta-client.js"></script>
+	<script type="text/javascript" src="../js/watson-ta-index.js"></script>
+
+    <div class="container">
+
+		<!-- ============== -->
+    	<!-- ANALYZE BUTTON -->
+    	<!--<input style=" display:none;" type="button" value="Analyze Sample Data" class="analyze automotiveBtn">-->
+    	<input id="btnAnalyze" type="hidden" class="analyze automotiveBtn">
+
+		<!-- ============== -->
+		<!-- LOADING SCREEN -->
+		<div id="loadingScreen" class="loading">
+			<div id="loadingWrapper">
+				<div>
+					<img src="images/loading.gif" alt="Loading Icon" />
+					<p>Loading . . .</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- ====== -->
+		<!-- ERRORS -->
+    	<div style="display:none;" class="problemArea">
+			<input type="hidden" id="problems" value="cars.json" class="problems">
+			<textarea class="problemText"></textarea>
+			<textarea id="featuresText" readonly class="featuresText"></textarea>
+		</div>
+		
+		<!-- =========== -->
+		<!-- REPORT DATA -->
+		<div class="row viz result" style="margin: 0 auto;">
+			<div style="margin: 0 auto;">
+				<div class="row"  style="margin: 0 auto;">
+					<div id="taWidgetContainer"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+		

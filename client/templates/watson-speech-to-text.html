@@ -1,0 +1,113 @@
+	<script type="text/javascript" src="../js/watson/watson-stt.js"></script>
+	
+
+		<div class="container">
+			<!--<div class="row">
+				<div class="col-lg-12">
+					<div class="row top-nav">
+						<div class="col-lg-12">
+							<a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/speech-to-text.html" class="left">Learn more about this service</a>
+							<a href="https://github.com/watson-developer-cloud/speech-to-text-nodejs" class="right fork">Fork</a>
+							<a href="mailto:watsondevelopercloud@ibm.com" class="right">Contact Us</a>
+							<a href="https://developer.ibm.com/watson/" class="right">Watson Community</a>
+						</div>
+					</div>
+					<div style="padding-bottom:0px;" class="row header">
+						<div class="avatar img-container col-lg-1 col-xs-1">
+							<img src="/images/app.png">
+						</div>
+						<div class="col-lg-6 col-xs-6">
+							<h2>Speech to Text NodeJS Starter Application</h2>
+							<p>The Speech to Text service uses IBM's speech recognition capabilities to convert English speech into text. The transcription of incoming audio is continuously sent back to the client with minimal delay, and it is corrected as more speech is heard. The service can be accessed via a REST interface.</p>
+						</div>
+						<div class="col-lg-4 col-xs-4">
+							<h3>Keep Exploring:</h3>
+							<a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/speech-to-text/" class="left">Documentation</a>
+							<a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/speech-to-text" class="right">API Details</a>
+						</div>
+					</div>
+				</div>
+			</div>-->
+
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-xs-6">
+					
+					<div class="mic-container well overlay-container">
+						<!--<div class="unsupported-overlay">
+							<h4>This application only works in recent versions of <a href="https://www.google.com/intl/en/chrome/browser/desktop/" target="_blank">Chrome</a> supporting HTML5 audio capture.</h4>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-xs-12">
+								<p class="form-group">For best results, please use a hi-speed internet connection and a close talking microphone (e.g., from a headset) in a quiet area.  </p>
+								<div class="microphone">
+									<div class="micButton-preload"></div>
+									<div class="micButton"></div>
+									<p class="micText">Press to start speaking</p>
+								</div>
+							</div>
+						</div>-->
+						<div class="microphone">
+							<div class="micButton-preload"></div>
+							<div class="micButton"></div>
+							<p class="micText">Press to start speaking</p>
+						</div>
+					</div>
+
+					<!--<h2>Transcribe from Audio Files</h2>
+					<div class="row well">
+						<div class="col-lg-12 col-md-12 col-xs-12">
+							<div class="row form-group">
+								<div class="col-lg-12 col-md-12 col-xs-12 upload-label">
+									<span>Use an existing file for the service to transcribe.</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="sample-audio col-lg-6 col-md-6 col-xs-6 text-center">
+									<a href="javascript:void(0);" class="sample-btn audio1">
+										<img src="images/play-icon.svg" class="sample-icon">
+										<p class="sample-title">Sample1.wav</p>
+									</a>
+									<a class="btn btn-block send-api-audio1">Send to API</a>
+								</div>
+								<div class="sample-audio col-lg-6 col-md-6 col-xs-6 text-center">
+									<a href="javascript:void(0);" class="sample-btn audio2">
+										<img src="images/play-icon.svg" class="sample-icon">
+										<p class="sample-title">Sample2.wav</p>
+										<a class="btn btn-block send-api-audio2">Send to API</a>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>-->
+				</div>
+				<div class="col-lg-6 col-md-6 col-xs-12">
+					<h2>Output</h2>
+					<p>To test your mic, say "one two three four five." If the words are not recorded correctly, you may need to adjust your audio input device or settings. If the response seems slow, it could be a network issue. If you're still having trouble,please use the sample files instead.</p>
+
+					<div class="well">
+						<div style="display:none" class="form-group row loading text-center">
+							<img src="images/watson.gif">
+						</div>
+						<div class="errorMsg"></div>
+						<div id="text">Transcript: </div>
+					</div>
+				</div>
+			</div>
+
+			<!--<div class="row">
+				<div class="help-block text-center">
+					<small>This application only works in recent versions of Chrome supporting HTML5 audio capture</small>
+				</div>
+			</div>
+
+			<div class="hidden">
+				<audio preload="auto" autobuffer controls src="audio/sample1.wav" class="sample1"></audio>
+				<audio preload="auto" autobuffer controls src="audio/sample2.wav" class="sample2"></audio>
+
+				<form id="fileupload" method="POST" enctype="multipart/form-data" action="/" class="upload-form">
+					<input type="hidden" name="url" class="url-input">
+				</form>
+			</div>-->
+		</div>
+
+		

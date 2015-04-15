@@ -1,0 +1,124 @@
+<div class="container">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" class="loading">
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+
+	<!--
+	$scope.cardata = {
+        "make": "",
+        "model": "",
+        "name": "",
+        "type": "",
+        "values": {
+            "price": 0,
+            "fuel_eff": 0,
+            "performance": 0,
+            "comfort": 0,
+            "condition": 0,
+            "safety": 0
+        },
+        "image": {
+            "exterior": "",
+            "interior": ""
+        }
+    }
+	-->
+	
+	<div>
+			<div class="col-lg-12 col-md-12 col-xs-12">
+				<h3>Enter car data</h3>
+				<form>
+					<div class="form-group">
+						<label>Make</label>
+						
+						<select id="carMake" ng-change="getCarModelsByMake()" ng-model="cardata.main.make">
+							<option ng-repeat="make in carMakesModels">{{make.title}}</option>	
+						</select>
+						
+					</div>
+					<div>
+						<label>Models</label>
+						<select id="carModel" ng-model="cardata.main.model">
+							<option ng-repeat="model in carModelsByMake[0].models">{{model.title}}</option>	
+						</select>
+					</div>
+					<!--<div>
+						<label>Type</label>
+						<select id="carType" ng-model="cardata.type">
+							<option>SUV</option>
+							<option>Sedan</option>
+							<option>Minivan</option>
+							<option>Hybrid/Electric</option>	
+						</select>
+					</div>-->
+					<div>
+						<label>Year</label>
+						<select ng-model="cardata.main.year">
+						  	<!--<option ng-repeat="n in [] | range:2" value="{{$index+2014}}">{{$index+2014}}</option>-->
+						  	<option>2014</option>
+						  	<option>2015</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Price</label>
+						<input type="text" id="carPrice" name="carPrice" ng-model="cardata.main.values.price">
+					</div>
+					<!--<div class="form-group">
+						<label>Fuel Efficiency</label>
+						<select ng-model="cardata.values.fuel_eff">
+						  	<option ng-repeat="n in [] | range:100" value="{{$index+1}}">{{$index+1}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Safety Rating</label>
+						<select ng-model="cardata.values.safety">
+						  	<option ng-repeat="n in [] | range:10" value="{{$index+1}}">{{$index+1}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Performance</label>
+						<select ng-model="cardata.values.performance">
+						  	<option ng-repeat="n in [] | range:10" value="{{$index+1}}">{{$index+1}}</option>
+						</select>
+					</div>-->
+					<div class="form-group">
+						<label>Condition</label>
+						<select ng-model="cardata.main.values.condition">
+						  	<option ng-repeat="n in [] | range:10" value="{{$index+1}}">{{$index+1}}</option>
+						</select>
+					</div>
+					<!--<div class="form-group">
+						<label>Comfort Level</label>
+						<select ng-model="cardata.values.comfort">
+						  	<option ng-repeat="n in [] | range:10" value="{{$index+1}}">{{$index+1}}</option>
+						</select>
+					</div>-->
+					<input type="button" value="Submit" class="automotiveBtn" ng-click="createCarData()">
+				</form>
+				
+			</div>
+			<div>
+				<br/>
+				<h4>{{carEntryStatus}}</h3>
+				<div ng-hide="selectedCar.img == ''">
+					<div>
+						<br>
+						<img src="{{selectedCar.img}}" width="400">
+					</div>
+					<div>
+						StockId: {{selectedCar.id}}
+					</div>
+				</div>
+				
+			</div>
+	</div>
+
+	
+</div>

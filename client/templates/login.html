@@ -1,0 +1,36 @@
+<div id="loginScreen">
+	<!-- ============== -->
+	<!-- LOADING SCREEN -->
+	<div id="loadingScreen" data-loading>
+		<div id="loadingWrapper">
+			<div>
+				<img src="images/loading.gif" alt="Loading Icon" />
+				<p>Loading . . .</p>
+			</div>
+		</div>
+	</div>
+	<!-- ========== -->
+	<!-- LOGIN FORM -->
+	<div id="coxAutoLogo"></div>
+	<div id="loginWrapper">
+		<div id="loginTitle">
+			<h1>Sign In</h1>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" class="form-control" ng-model="userInfo.username">
+			</div>
+			<div class="form-group">
+				<label for="username">Password</label>
+				<input type="password" id="password" name="password" class="form-control" ng-model="userInfo.password">
+			</div>
+
+			<div class="form-group">
+				<p id="loginPara">Is this your first time using this application? Create an account <a href="#/createAccount">here</a>.</p>
+				<span ng-show="incorrectAuth">Please enter the correct username and password</span>
+				<input type="button" value="Login" class="authenticateBtn" ng-click="verifyUser()" style="margin-top:0.3em;">
+			</div>
+		</form>
+	</div>
+</div>

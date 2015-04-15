@@ -1,0 +1,48 @@
+{
+    "subject": "car",
+    "columns": [
+        {
+            "key": "price",
+            "full_name": "Price ($US)",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MIN"
+        },
+        {
+            "key": "fuel_eff",
+            "full_name": "Fuel Efficiency",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "safety",
+            "full_name": "Safety Rating",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "comfort",
+            "full_name": "Comfort Level",
+            "type": "NUMERIC",
+            "is_objective": true,
+            "goal": "MAX"
+        },
+        {
+            "key": "condition",
+            "full_name": "Condition",
+            "type": "NUMERIC",
+            "is_objective": false,
+            "goal": "MAX"
+        },
+        {
+            "key": "performance",
+            "full_name": "Perfomance",
+            "type": "NUMERIC",
+            "is_objective": false,
+            "goal": "MAX"
+        }
+    ],
+    "options": ""
+}

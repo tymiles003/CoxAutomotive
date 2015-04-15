@@ -1,0 +1,44 @@
+<div id="createAcctScreen">
+	<!-- ================ -->
+	<!-- NEW ACCOUNT FORM -->
+	<div id="coxAutoLogo"></div>
+	<div id="newAcctWrapper">
+		<form>
+			<div class="form-group">
+				<label for="username">Username *</label>
+				<input type="text" id="username2" name="username" class="form-control" ng-model="userInfo.username">
+				<span ng-show="userExists" style="color: red">Username already exists</span>
+			</div>
+			<div class="form-group">
+				<label for="firstname">First Name *</label>
+				<input type="text" id="firstname" name="firstname" class="form-control" ng-model="userInfo.firstname">
+			</div>
+			<div class="form-group">
+				<label for="lastname">Last Name *</label>
+				<input type="text" id="lastname" name="lastname" class="form-control" ng-model="userInfo.lastname">
+			</div>
+			<div class="form-group">
+				<label for="email">E-mail Address *</label>
+				<input type="text" id="email" name="email" class="form-control" ng-model="userInfo.email">
+			</div>
+			<div class="form-group">
+				<label for="password">Password *</label>
+				<input type="password" id="password2" name="password" class="form-control" ng-model="userInfo.password">
+			</div>
+			<div class="form-group additionalTop">
+				<div class="select-style">
+					<select id="userType" name="userType" ng-model="userInfo.userType">
+						<option value="">Customer Type</option>
+						<option ng-repeat="type in customerType" value="{{type}}">{{type}}</option>
+					</select>
+				</div>
+				<input type="button" value="Join" class="automotiveBtn" ng-click="createUser()">
+				<back-button back="Return to Main" return="index" class="floatCancel"></back-button>
+			</div>
+			<div class="form-group userMsgError">
+				<br><span ng-show="missingData">All fields are required</span>
+			</div>
+		</form>	
+	</div>
+	<br>
+</div>
