@@ -1,0 +1,10 @@
+.settings
+tests
+.cfignore
+.jazzignore
+.project
+READEME_dev.md
+build.xml
+Gruntfile.js
+npm-debug.log
+node_modules
